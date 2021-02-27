@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">JustPark</string>
+
+    <!--Title-->
+    <string name="first_slide_title">Search for Parking Place</string>
+    <string name="second_slide_title">Book a Parking Slot</string>
+    <string name="third_slide_title">Scan QR at Parking Place</string>
+    <string name="fourth_slide_title">Scan again while Exit</string>
+
+    <!--Description-->
+    <string name="first_slide_desc">Search for the place where you want to go (EX. mall, multiplex, office, apartment ect.) and select a Parking Place.</string>
+    <string name="second_slide_desc">Book a parking slot at that place with time period you want with online payment.</string>
+    <string name="third_slide_desc">When you reach at the place, Scan the QR code there with this app to Enter, and you have your parking spot ready for you.</string>
+    <string name="fourth_slide_desc">Once you are finish with your work, you can leave the place just by scanning the QR code at EXIT. </string>
+
+    <!--Buttons-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
+</resources>

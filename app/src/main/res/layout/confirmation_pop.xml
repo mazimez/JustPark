@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_dark"
+            android:padding="23dp">
+
+            <Button
+                android:id="@+id/conf_no_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_alert"
+                android:layout_marginTop="19dp"
+                android:background="@color/colorPrimary"
+                android:text="No"
+                android:textColor="@android:color/white"></Button>
+
+            <Button
+                android:id="@+id/conf_yes_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_alert"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="19dp"
+                android:background="@color/colorPrimary"
+                android:text="Yes"
+                android:textColor="@android:color/white"></Button>
+
+            <TextView
+                android:id="@+id/text_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="6dp"
+                android:textAlignment="center"
+                android:text="message"
+                android:textSize="17sp"></TextView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

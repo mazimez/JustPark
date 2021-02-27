@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "309060706777",
+    "firebase_url": "https://tillnow-35b4e.firebaseio.com",
+    "project_id": "tillnow-35b4e",
+    "storage_bucket": "tillnow-35b4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309060706777:android:6b8783ebe21df9e7f379c8",
+        "android_client_info": {
+          "package_name": "com.example.tillnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309060706777-nkq8fm99fdmujjnuv3h69qrbpbm0rjs4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tillnow",
+            "certificate_hash": "e6ca6727c00bb4f9cc64f76edfeab315c42146fc"
+          }
+        },
+        {
+          "client_id": "309060706777-i8o6siju6d871ocvg6hk2vtqhdmeg3mr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA78D4HxLcpT9aNM1oIJYShbvzdk4b7wgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309060706777-i8o6siju6d871ocvg6hk2vtqhdmeg3mr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

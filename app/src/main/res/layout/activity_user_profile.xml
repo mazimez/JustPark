@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.UserProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="20dp"
+                android:background="@android:color/holo_orange_dark">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_container"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="150dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@android:color/holo_orange_dark"
+                    android:layout_centerVertical="true">
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_account_circle_black_24dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/Tfullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FullName"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:layout_toRightOf="@id/profile_container"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/Tusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UserName"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp"
+                    android:layout_toEndOf="@id/profile_container"
+                    android:layout_below="@id/Tfullname"
+                    android:layout_marginLeft="10dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="-100dp">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardMaxElevation="10dp"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_drive_eta_black_24dp"
+                            android:layout_centerHorizontal="true"/>
+                        <TextView
+                            android:id="@+id/current_parkings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="20sp"
+                            android:includeFontPadding="false"
+                            android:fontFamily="@font/aclonica"
+                            android:layout_centerInParent="true"/>
+                        <TextView
+                            android:id="@+id/parking_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Booked Slots"
+                            android:includeFontPadding="false"
+                            android:textSize="14sp"
+                            android:layout_below="@id/current_parkings"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardMaxElevation="10dp"
+                    android:layout_margin="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_person_pin_circle_black_24dp"
+                            android:layout_centerHorizontal="true"/>
+                        <TextView
+                            android:id="@+id/places_visited"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="20sp"
+                            android:includeFontPadding="false"
+                            android:fontFamily="@font/aclonica"
+                            android:layout_centerInParent="true"/>
+                        <TextView
+                            android:id="@+id/places_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Places Visited"
+                            android:includeFontPadding="false"
+                            android:textSize="14sp"
+                            android:layout_below="@id/places_visited"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@drawable/ic_person_black_24dp"
+                    app:startIconTint="@android:color/holo_orange_dark">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profile_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FullName"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="UserName"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@drawable/ic_account_box_black_24dp"
+                    app:startIconTint="@android:color/holo_orange_dark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profile_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UserName"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@drawable/ic_email_black_24dp"
+                    app:startIconTint="@android:color/holo_orange_dark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profile_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PhoneNumber"
+                    android:layout_marginBottom="10dp"
+                    app:startIconDrawable="@drawable/ic_local_phone_black_24dp"
+                    app:startIconTint="@android:color/holo_orange_dark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profile_phonenum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PhoneNumber"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:enabled="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LogOut"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:onClick="logOut"
+                    android:background="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:itemIconTint="@android:color/black"
+        app:itemTextColor="@android:color/black"
+        app:menu="@menu/bottom_navigation"/>
+</RelativeLayout>

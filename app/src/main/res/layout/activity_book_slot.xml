@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".BookSlot">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Book The Slot"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="33sp" />
+    <ImageView
+        android:id="@+id/place_pic"
+        android:layout_below="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/ic_baseline_photo_size_select_actual_24" />
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/place_pic"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="Place Name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="33sp" />
+    <LinearLayout
+        android:id="@+id/lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/placeName">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:text="FROM"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:textColor="#111111"
+                android:textStyle="bold"
+                android:text="TO"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lable">
+        <TextView
+            android:id="@+id/time_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:text="00:00 AM"/>
+        <TextView
+            android:id="@+id/time_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00 PM"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/payment_amount"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount : RS. 0 Only"
+        android:textColor="#111111"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_amount"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/payment_container">
+        <Button
+            android:id="@+id/payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paymeny Done"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_green_light"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/startBook_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="30dp"
+        android:layout_below="@id/payment_container">
+        <Button
+            android:id="@+id/startBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="Book the slot"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/book_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="error"
+        android:layout_below="@id/startBook_container"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/book_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_error"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+
+
+
+
+
+</RelativeLayout>
