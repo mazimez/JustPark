@@ -356,8 +356,19 @@ public class BookSlot extends AppCompatActivity {
                                                                         editor.commit();
 
                                                                         //going to slots history
-                                                                        Intent intent = new Intent(context, Booked.class);
-                                                                        startActivity(intent);
+//                                                                        Intent intent = new Intent(context, Booked.class);
+//                                                                        startActivity(intent);
+//                                                                        finish();
+                                                                        String userName = userData.getString("userName",null);
+                                                                        String email = userData.getString("email",null);
+                                                                        String uri = Uri.parse("http://easyfarm.ml/JustPark/public/user/buyparking")
+                                                                                .buildUpon()
+                                                                                .appendQueryParameter("name", userName)
+                                                                                .appendQueryParameter("amount", String.valueOf(TotalPrice))
+                                                                                .appendQueryParameter("email", email)
+                                                                                .build().toString();
+                                                                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                                                                        startActivity(browserIntent);
                                                                         finish();
                                                                     }
                                                                 });

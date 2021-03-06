@@ -93,21 +93,21 @@
         android:textAlignment="center"
         android:textSize="26sp"
         android:textStyle="bold"/>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/payment_amount"
-        app:cardCornerRadius="30dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/payment_container">
-        <Button
-            android:id="@+id/payment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Paymeny Done"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_green_light"/>
-    </androidx.cardview.widget.CardView>
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/payment_amount"-->
+<!--        app:cardCornerRadius="30dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:id="@+id/payment_container">-->
+<!--        <Button-->
+<!--            android:id="@+id/payment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Paymeny Done"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:background="@android:color/holo_green_light"/>-->
+<!--    </androidx.cardview.widget.CardView>-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/startBook_container"
@@ -115,13 +115,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:cardCornerRadius="30dp"
-        android:layout_below="@id/payment_container">
+        android:layout_below="@id/payment_amount">
         <Button
             android:id="@+id/startBook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
-            android:text="Book the slot"/>
+            android:text="Proceed To Billing"/>
     </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/book_error"
