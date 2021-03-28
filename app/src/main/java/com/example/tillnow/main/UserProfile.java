@@ -166,6 +166,7 @@ public class UserProfile extends AppCompatActivity {
             }
 
             //setting the user's data to textViews
+            Log.d("myTag", "setting the user's data to textViews");
             TfullName.setText(fullName);
             TuserName.setText(userName);
             FullName.setText(fullName);
@@ -177,6 +178,7 @@ public class UserProfile extends AppCompatActivity {
 
 
             //getting the data of user's booked Slots
+            Log.d("myTag", "getting the data of user's booked Slots");
             db.collection("Users").document(uid).collection("SlotsHistory")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -195,6 +197,7 @@ public class UserProfile extends AppCompatActivity {
                     });
 
             //getting the data for place's visited from database
+            Log.d("myTag", "getting the data for place's visited from database");
             db.collection("Users").document(uid)
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -204,9 +207,15 @@ public class UserProfile extends AppCompatActivity {
                                 //getting the data from database and converting it into object
                                 DocumentSnapshot userData = task.getResult();
                                 Map<String,Object> userDataMap = userData.getData();
-                                ArrayList<String> placesVisited = (ArrayList<String>) userData.get("visited");
-                                int PlacesVisited = placesVisited.size();
-                                updatePlacesVisited(PlacesVisited-1);
+                                try{
+                                    ArrayList<String> placesVisited = (ArrayList<String>) userData.get("visited");
+                                    int PlacesVisited = placesVisited.size();
+                                    if(PlacesVisited >0){
+                                        updatePlacesVisited(PlacesVisited-1);
+                                    }
+                                }catch(Exception e){
+
+                                }
                             }
                         }
                     });

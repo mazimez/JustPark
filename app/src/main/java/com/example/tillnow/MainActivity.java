@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                                                 startActivity(intent);
                                                 finish();
                                             }else{
+                                                Log.d("myTag", "updating the shared prefrence from database");
                                                 //updating the shared prefrence from database
                                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                                     String uidFromDB = document.getId();
