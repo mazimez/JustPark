@@ -43,6 +43,7 @@ import java.util.Objects;
 
 public class Scan extends AppCompatActivity {
 
+//    sdvsdvsdvsdvsvsdsdvsdv
     //local
     private String placeIdDB,placeIdScane;
     private String userId;
