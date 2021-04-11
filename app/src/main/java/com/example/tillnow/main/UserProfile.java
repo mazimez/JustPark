@@ -198,27 +198,27 @@ public class UserProfile extends AppCompatActivity {
 
             //getting the data for place's visited from database
             Log.d("myTag", "getting the data for place's visited from database");
-            db.collection("Users").document(uid)
-                    .get()
-                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                            if(task.isSuccessful()){
-                                //getting the data from database and converting it into object
-                                DocumentSnapshot userData = task.getResult();
-                                Map<String,Object> userDataMap = userData.getData();
-                                try{
-                                    ArrayList<String> placesVisited = (ArrayList<String>) userData.get("visited");
-                                    int PlacesVisited = placesVisited.size();
-                                    if(PlacesVisited >0){
-                                        updatePlacesVisited(PlacesVisited-1);
-                                    }
-                                }catch(Exception e){
-
-                                }
-                            }
-                        }
-                    });
+//            db.collection("Users").document(uid)
+//                    .get()
+//                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                            if(task.isSuccessful()){
+//                                //getting the data from database and converting it into object
+//                                DocumentSnapshot userData = task.getResult();
+//                                Map<String,Object> userDataMap = userData.getData();
+//                                try{
+//                                    ArrayList<String> placesVisited = (ArrayList<String>) userData.get("visited");
+//                                    int PlacesVisited = placesVisited.size();
+//                                    if(PlacesVisited >0){
+//                                        updatePlacesVisited(PlacesVisited-1);
+//                                    }
+//                                }catch(Exception e){
+//
+//                                }
+//                            }
+//                        }
+//                    });
 
         }else{
             //taking user to login activity because he is not logged in
