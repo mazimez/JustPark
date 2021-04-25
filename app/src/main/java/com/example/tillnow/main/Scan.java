@@ -190,37 +190,37 @@ public class Scan extends AppCompatActivity {
                                             Log.d("myTag","getting the data from database and converting it into object");
                                             DocumentSnapshot userData = task.getResult();
                                             Map<String,Object> userDataMap = userData.getData();
-                                            ArrayList<String> placesVisited = null;
-                                            Log.d("myTag","try catch");
-                                            try{
-                                                Log.d("myTag","in try");
-                                                placesVisited = (ArrayList<String>) userData.get("visited");
-                                            }catch(Exception e){
-                                                Log.d("myTag","in catch");
-                                                placesVisited.add(placeIdScane);
-                                            }
-                                            Log.d("myTag","out of try catch");
-                                            if(placesVisited.contains(placeIdScane)){
-                                                //user has already visited this place, no need to do anything
-                                                Log.d("myTag","user has already visited this place, no need to do anything");
-
-                                            }else{
-                                                //adding the new place's id into array
-                                                Log.d("myTag","adding the new place's id into array");
-                                                placesVisited.add(placeIdScane);
-                                            }
-                                            //upadting the value into map
-                                            Log.d("myTag","upadting the value into map");
-                                            userDataMap.put("visited",placesVisited);
+//                                            ArrayList<String> placesVisited = null;
+//                                            Log.d("myTag","try catch");
+//                                            try{
+//                                                Log.d("myTag","in try");
+//                                                placesVisited = (ArrayList<String>) userData.get("visited");
+//                                            }catch(Exception e){
+//                                                Log.d("myTag","in catch");
+//                                                placesVisited.add(placeIdScane);
+//                                            }
+//                                            Log.d("myTag","out of try catch");
+//                                            if(placesVisited.contains(placeIdScane)){
+//                                                //user has already visited this place, no need to do anything
+//                                                Log.d("myTag","user has already visited this place, no need to do anything");
+//
+//                                            }else{
+//                                                //adding the new place's id into array
+//                                                Log.d("myTag","adding the new place's id into array");
+//                                                placesVisited.add(placeIdScane);
+//                                            }
+//                                            //upadting the value into map
+//                                            Log.d("myTag","upadting the value into map");
+//                                            userDataMap.put("visited",placesVisited);
                                             //updating the value into databse
-                                            db.collection("Users").document(userId)
-                                                    .set(userDataMap)
-                                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                        @Override
-                                                        public void onComplete(@NonNull Task<Void> task) {
-                                                            Log.d("myTag", "onComplete: new place added");
-                                                        }
-                                                    });
+//                                            db.collection("Users").document(userId)
+//                                                    .set(userDataMap)
+//                                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                                        @Override
+//                                                        public void onComplete(@NonNull Task<Void> task) {
+//                                                            Log.d("myTag", "onComplete: new place added");
+//                                                        }
+//                                                    });
 
                                         }
                                     }
